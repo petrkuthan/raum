@@ -39,6 +39,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
+          cache: "pnpm"
+          cache-dependency-path: ./pnpm-lock.yaml
       - name: Setup pnpm and Install Dependencies
         run: |
           npm install -g pnpm
